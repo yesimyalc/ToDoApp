@@ -146,4 +146,23 @@ class MainActivity : AppCompatActivity(), TaskViewConnector {
         tasksAdapter2?.notifyDataSetChanged()
     }
 
+    fun deleteAll(view: View)
+    {
+        val allTasksBar=findViewById<RadioButton>(R.id.allTasksBar)
+        if(allTasksBar.isChecked)
+        {
+            allTasksList.clear()
+            allTasksRef.removeValue()
+            tasksAdapter?.submitItems(allTasksList)
+            tasksAdapter?.notifyDataSetChanged()
+        }
+        else
+        {
+            completedTasksList.clear()
+            completedTasksRef.removeValue()
+            tasksAdapter2?.submitItems(completedTasksList)
+            tasksAdapter2?.notifyDataSetChanged()
+        }
+    }
+
 }
