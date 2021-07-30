@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_appearance_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/task_bg"
+    android:orientation="horizontal"
+    android:layout_marginTop="5sp">
+
+    <TextView
+        android:id="@+id/taskText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Task Text Here"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="10sp"
+        android:textColor="@color/white"/>
+
+    <CheckBox
+        android:id="@+id/taskCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"
+        android:layout_gravity="right|center"
+        android:checked="false"
+        android:textAlignment="gravity"
+        />
+
+    <ImageView
+        android:id="@+id/trashBox"
+        android:layout_width="35sp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"
+        android:layout_gravity="right|center"
+        android:checked="false"
+        android:background="@drawable/trashbin"
+        android:textAlignment="gravity" />
+
+</LinearLayout>

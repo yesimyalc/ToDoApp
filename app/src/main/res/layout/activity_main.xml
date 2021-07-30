@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/RoyalBlue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/taskAddBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:background="@color/MidnightBlue">
+
+        <EditText
+            android:id="@+id/newTaskAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter New Task "
+            android:textColorHint="@color/white"
+            android:layout_marginLeft="10sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"
+            android:visibility="visible"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginRight="10sp"
+            android:text=" ->"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="17sp"
+            android:textColor="@color/MidnightBlue"
+            android:background="@drawable/create_button"
+            android:onClick="onCreateTask"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/taskBarChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/radio_group"
+        android:layout_marginRight="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="10sp">
+
+        <RadioButton
+            android:id="@+id/allTasksBar"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/drawable_units_tab_selector"
+            android:textColor="@drawable/drawable_units_tab_text_color_selector"
+            android:gravity="center"
+            android:text="All Tasks"
+            android:clickable="true"
+            android:checked="true"
+            android:onClick="onAllTasks"
+            android:button="@null"
+            />
+
+        <RadioButton
+            android:id="@+id/completedTasksBar"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/drawable_units_tab_selector"
+            android:textColor="@drawable/drawable_units_tab_text_color_selector"
+            android:checked="false"
+            android:text="Completed Tasks"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="onCompletedTasks"
+            android:button="@null"
+            />
+
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10sp"
+        android:visibility="visible"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/completedTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10sp"
+        android:visibility="gone"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
