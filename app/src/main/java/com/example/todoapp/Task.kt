@@ -1,6 +1,6 @@
 package com.example.todoapp
 
-class Task(val taskName: String, isCompleted: Boolean)
+class Task(val id: String, val taskName: String, isCompleted: Boolean)
 {
     var isCompleted=isCompleted
         private set
