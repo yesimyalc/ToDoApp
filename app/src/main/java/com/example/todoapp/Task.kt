@@ -1,6 +1,9 @@
 package com.example.todoapp
 
-class Task(val id: String, val taskName: String, isCompleted: Boolean)
+import android.os.Parcelable
+import java.io.Serializable
+
+class Task(val id: String, val taskName: String, isCompleted: Boolean): Serializable
 {
     var isCompleted=isCompleted
         private set
